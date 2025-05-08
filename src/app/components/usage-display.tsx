@@ -3,7 +3,9 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Zap, Droplets, Flame, BarChart3 } from 'lucide-react';
 import type { GenerateEcoRecommendationsInput } from '@/ai/flows/generate-eco-recommendations';
-import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig, BarChart, Bar, XAxis, YAxis, CartesianGrid } from '@/components/ui/chart';
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
+import type { ChartConfig } from '@/components/ui/chart';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { Skeleton } from '@/components/ui/skeleton';
 
 interface UsageDisplayProps {
