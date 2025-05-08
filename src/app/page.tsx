@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -26,7 +27,7 @@ export default function Home() {
   const { toast } = useToast();
 
   const onFormSubmit = async (data: GenerateEcoRecommendationsInput) => {
-    setAppState(prev => ({ ...prev, isLoading: true, error: null }));
+    setAppState(prev => ({ ...prev, isLoading: true, error: null, recommendations: prev.recommendations })); // Keep old recommendations while loading new ones
     const result = await handleUtilitySubmission(data);
     if (result.success && result.data) {
       setAppState({
@@ -45,9 +46,9 @@ export default function Home() {
         ...prev,
         isLoading: false,
         error: result.error || 'Failed to get recommendations.',
-        // Optionally clear recommendations on error or keep old ones
+        lastSubmission: result.submittedInput || data, // Keep submitted data for display even on error
+        // Optionally clear recommendations on error or keep old ones. Current: keep old ones.
         // recommendations: null, 
-        // lastSubmission: result.submittedInput || data, // Keep submitted data for display
       }));
       toast({
         title: "Error",
@@ -68,9 +69,10 @@ export default function Home() {
       )}
 
       <div className="grid md:grid-cols-2 gap-8">
-        <UsageDisplay data={appState.lastSubmission} isLoading={appState.isLoading && !appState.lastSubmission} />
-        <RecommendationsDisplay recommendations={appState.recommendations} isLoading={appState.isLoading && !appState.recommendations} />
+        <UsageDisplay data={appState.lastSubmission} isLoading={appState.isLoading} />
+        <RecommendationsDisplay recommendations={appState.recommendations} isLoading={appState.isLoading} />
       </div>
     </div>
   );
 }
+
