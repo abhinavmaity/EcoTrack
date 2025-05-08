@@ -35,7 +35,7 @@ export default function RecommendationsDisplay({ recommendations, isLoading }: R
     <Card className="shadow-lg">
       <CardHeader>
         <CardTitle className="text-2xl font-semibold text-primary flex items-center">
-          <Lightbulb className="mr-2 h-6 w-6 text-yellow-400" />
+          <Lightbulb className="mr-2 h-6 w-6 text-primary" /> 
           Eco-Friendly Tips
         </CardTitle>
         <CardDescription>Personalized advice and general tips to help you save resources.</CardDescription>

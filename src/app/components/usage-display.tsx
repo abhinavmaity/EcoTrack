@@ -90,7 +90,7 @@ export default function UsageDisplay({ data, isLoading }: UsageDisplayProps) {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Electricity</CardTitle>
-              <Zap className="h-4 w-4 text-yellow-500" />
+              <Zap className="h-4 w-4 text-[hsl(var(--chart-1))]" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{data.electricityUsageKWh.toLocaleString()}</div>
@@ -100,7 +100,7 @@ export default function UsageDisplay({ data, isLoading }: UsageDisplayProps) {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Water</CardTitle>
-              <Droplets className="h-4 w-4 text-blue-500" />
+              <Droplets className="h-4 w-4 text-[hsl(var(--chart-2))]" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{data.waterConsumptionLiters.toLocaleString()}</div>
@@ -110,7 +110,7 @@ export default function UsageDisplay({ data, isLoading }: UsageDisplayProps) {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Gas</CardTitle>
-              <Flame className="h-4 w-4 text-orange-500" />
+              <Flame className="h-4 w-4 text-[hsl(var(--chart-3))]" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{data.gasUsageCubicMeters.toLocaleString()}</div>

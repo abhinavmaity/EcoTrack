@@ -4,28 +4,28 @@
 
 @layer base {
   :root {
-    --background: 0 0% 94%; /* Light Gray #F0F0F0 */
-    --foreground: 0 0% 15%; /* Darker gray for better contrast on light gray */
+    --background: 0 0% 96%; /* Slightly lighter Gray */
+    --foreground: 0 0% 20%; /* Darker gray for better contrast */
     --card: 0 0% 100%; /* White */
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 0 0% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
-    --primary: 120 39% 50%; /* Green #4CAF50 */
+    --popover-foreground: 0 0% 20%;
+    --primary: 130 45% 60%; /* Softer, slightly tealish Green */
     --primary-foreground: 0 0% 100%; /* White */
-    --secondary: 0 0% 88%; /* Slightly darker gray than background */
-    --secondary-foreground: 0 0% 15%;
-    --muted: 0 0% 92%; /* Lighter gray for muted elements */
+    --secondary: 0 0% 90%; /* Slightly darker gray than background */
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 94%; /* Lighter gray for muted elements */
     --muted-foreground: 0 0% 45%;
-    --accent: 217 91% 60%; /* Blue #2196F3 */
+    --accent: 180 55% 60%; /* Softer Teal */
     --accent-foreground: 0 0% 100%; /* White */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 85%; /* Border for cards, inputs */
-    --input: 0 0% 85%;
-    --ring: 217 91% 60%; /* Accent color for focus rings */
-    --chart-1: 120 39% 50%; /* Green for electricity */
-    --chart-2: 217 91% 60%; /* Blue for water */
-    --chart-3: 30 80% 55%; /* Orange for gas */
+    --border: 0 0% 88%; /* Border for cards, inputs */
+    --input: 0 0% 88%;
+    --ring: 180 55% 60%; /* Accent color for focus rings */
+    --chart-1: 130 45% 60%; /* New Primary - Softer Green for electricity */
+    --chart-2: 180 55% 60%; /* New Accent - Softer Teal for water */
+    --chart-3: 35 90% 65%; /* Softer Orange for gas */
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
@@ -38,7 +38,7 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 180 55% 60%;
   }
 
   .dark {
@@ -48,22 +48,22 @@
     --card-foreground: 0 0% 98%;
     --popover: 222 47% 11%;
     --popover-foreground: 0 0% 98%;
-    --primary: 120 39% 55%; /* Slightly lighter green */
+    --primary: 130 45% 65%; /* Slightly lighter, softer green */
     --primary-foreground: 0 0% 10%; /* Dark text for contrast */
     --secondary: 217 33% 25%;
     --secondary-foreground: 0 0% 98%;
     --muted: 217 33% 20%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 217 91% 65%; /* Slightly lighter blue */
+    --accent: 180 55% 65%; /* Slightly lighter, softer teal */
     --accent-foreground: 0 0% 10%; /* Dark text for contrast */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 217 33% 22%;
     --input: 217 33% 22%;
-    --ring: 217 91% 65%;
-    --chart-1: 120 39% 55%; 
-    --chart-2: 217 91% 65%;
-    --chart-3: 30 80% 60%;
+    --ring: 180 55% 65%;
+    --chart-1: 130 45% 65%; 
+    --chart-2: 180 55% 65%;
+    --chart-3: 35 90% 70%; /* Lighter, softer orange for dark mode */
 
     /* Dark Sidebar specific colors - can be adjusted */
     --sidebar-background: 240 5.9% 10%;
@@ -73,7 +73,7 @@
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 180 55% 65%;
   }
 }
 

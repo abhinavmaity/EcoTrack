@@ -58,7 +58,7 @@ export default function UtilityInputForm({ onSubmit, isLoading }: UtilityInputFo
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="flex items-center text-lg">
-                    <Zap className="mr-2 h-5 w-5 text-yellow-500" />
+                    <Zap className="mr-2 h-5 w-5 text-[hsl(var(--chart-1))]" />
                     Electricity Usage (kWh)
                   </FormLabel>
                   <FormControl>
@@ -74,7 +74,7 @@ export default function UtilityInputForm({ onSubmit, isLoading }: UtilityInputFo
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="flex items-center text-lg">
-                    <Droplets className="mr-2 h-5 w-5 text-blue-500" />
+                    <Droplets className="mr-2 h-5 w-5 text-[hsl(var(--chart-2))]" />
                     Water Consumption (Liters)
                   </FormLabel>
                   <FormControl>
@@ -90,7 +90,7 @@ export default function UtilityInputForm({ onSubmit, isLoading }: UtilityInputFo
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="flex items-center text-lg">
-                    <Flame className="mr-2 h-5 w-5 text-orange-500" />
+                    <Flame className="mr-2 h-5 w-5 text-[hsl(var(--chart-3))]" />
                     Gas Usage (m³)
                   </FormLabel>
                   <FormControl>
@@ -100,7 +100,11 @@ export default function UtilityInputForm({ onSubmit, isLoading }: UtilityInputFo
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground" disabled={isLoading}>
+            <Button 
+              type="submit" 
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground transform transition-all duration-200 ease-in-out hover:scale-[1.02] hover:shadow-lg" 
+              disabled={isLoading}
+            >
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
